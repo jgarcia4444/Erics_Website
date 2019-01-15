@@ -15,7 +15,7 @@
       </ul>
       
     </nav>
-    <router-view/>
+    <router-view class="container-fluid text-center"/>
   </div>
 </template>
 
@@ -25,5 +25,8 @@ body {
 }
 nav li {
   display: inline-block;
+}
+nav {
+  margin-bottom: 1rem;
 }
 </style>

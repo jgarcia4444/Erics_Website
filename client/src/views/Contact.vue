@@ -1,5 +1,12 @@
 <template>
-    <h1>Contact</h1>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <h1>Contact info</h1>
+            </div>
+            
+        </div>
+    </div>
 </template>
 
 <script>

@@ -3,51 +3,64 @@
     <div class="container-fluid" id="mainSection">
       <div class="jumbotron jumbtron-fluid">
         <h2>
-          Looking for a home?
+          Eric Kramer Reality
         </h2>
         <p class="lead">
-          Don't know where to start?
+          Helping poeple find homes in the coachella valley.
         </p>
-        <button class="btn btn-danger" type="button">Find a home</button>
+        <button class="btn btn-danger" type="button" href="/findAHome">
+          <router-link class="nav-link" to="/findAHome">
+            Find a home
+          </router-link>
+        </button>
+      </div>
+      <div class="container-fluid">
+        <div id="propertyCarousel" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item">
+              <img class="d-block w-100" src="#" alt="First slide"/>
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="#" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="#" alt="Third slide">
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
       </div>
     </div>
     
-    
-    <div class="container-fluid" id="findAHomeSection">
-      <form>
-        <h2>
-          Find a Home
-        </h2>
-        <div class="form-group row">
-          <div class="col-sm-6">
-            <label for="firstName">First Name</label>
-            <input class="form-control" type="text" id="firstName" />
-          </div>
-          <div class="col-sm-6">
-            <label for="lastName">Last Name</label>
-            <input class="form-control" id="lastName" type="text" />
-          </div>
-        </div>
-      </form>
-    </div>
   </div>
 </template>
 
 <style>
 
-  body {
-    background-color: #000;
+body {
+  background-color: #000;
+  color: #fff;
 }
 
-  .jumbotron {
-    margin: 1rem auto 1rem auto; 
-    background-color: rgba(260, 260, 260, 0.5);
-    color: #fff;
-  }
+.jumbotron {
+  background-color: rgba(260, 260, 260, 0.0);
+}
 
-  #mainSection {
-    height: 100vh;
-  }
+#mainSection {
+  height: 100vh;
+}
+
+#propertyCarousel {
+  margin-top: 1rem;
+}
+
 
 
 </style>
