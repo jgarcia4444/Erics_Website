@@ -18,6 +18,7 @@
           <div class="col-sm-6">
             <label  for="email">Email</label>
             <input v-model="user.email" class="form-control" id="email" type="email" required/>
+            <small>We'll never share your email.</small>
           </div>
           <div class="col-sm-6">
             <label for="phoneNumber">Phone Number</label>
@@ -34,7 +35,24 @@
             <input v-model="user.numberOfRooms" class="form-control" type="text" id="numberOfRooms" required />
           </div>
         </div>
-        <button class="btn btn-danger">Submit</button>
+        <div class="form-group row">
+          <div class="col-sm-6">
+            <label for="numberOfBathrooms">Number of Bathrooms</label>
+            <input v-model="user.numberOfBathrooms" class="form-control" type="text" id="numberOfBathrooms" required/>
+          </div>
+          <div class="col-sm-6">
+            <label for="preferredContact">Preferred way of contact</label>
+            <input v-model="user.preferredContact" class="form-control" id="preferredContact" type="text" required />
+            <small>(Email / Phone Call / Text)</small>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-sm">
+            <label for="priceRange">Budget: {{ user.priceRange }}</label>
+            <input min="100000" max="1000000" step="25000" v-model="user.priceRange" type="range" class="form-control-range" id="priceRange" required/>
+          </div>
+        </div>
+        <button @click="formSubmitted=true;" type="submit" class="btn btn-danger">Submit</button>
       </form>
     </div>
 </template>
@@ -42,16 +60,26 @@
 <script>
 export default {
     data: () => ({
+      // formSubmitted: false,
       user: {
         firstName: '',
         lastName: '',
         email: '',
         phoneNumber: '',
         zipCode: '',
-        numberOfRooms: ''
+        numberOfRooms: '',
+        numberOfBathrooms: '',
+        preferredContact: '',
+        priceRange: 0,
       },
 
     }),
+    methods: {
+      // Once the form is submitted add the form data to the database.
+      // addFormData() {
+
+      // },
+    },
 };
 </script>
 
@@ -67,5 +95,9 @@ form {
 
 .col-sm-6 {
   margin-top: 2rem;
+}
+
+.modal {
+  color: white;
 }
 </style>
